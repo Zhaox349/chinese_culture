@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "WontonByDaFontMafia";
+  src: url("./resources/WontonByDaFontMafia-x378V.ttf");
+}
+
+@font-face {
+  font-family: "Inconsolata-Regular";
+  src: url("./resources/Inconsolata-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inconsolata-Medium";
+  src: url("./resources/Inconsolata-Medium.ttf");
+}
+
+body {
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  padding-top: 31px;
+  padding-left: 44px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Inconsolata-Medium";
+  z-index: 9999;
+}
+
+.menu .left {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.menu .right {
+  font-size: 18px;
+}
+
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+
+  background-color: #ffffffde;
+  border: 1px solid #000;
+
+  width: 694px;
+  height: 369px;
+
+  padding: 57px 61px 0;
+  font-size: 20px;
+  font-family: "Inconsolata-Regular";
+  z-index: 99999999;
+}
+
+.dialog .spec {
+  font-family: "WontonByDaFontMafia";
+}
+
+.dialog .part2 {
+  margin-top: 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dialog .part2 .img {
+  min-width: 110px;
+  width: 110px;
+  height: 110px;
+}
+
+.dialog .close {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.dialog .close::before,
+.dialog .close::after {
+  position: absolute;
+  content: " ";
+  background-color: #000000;
+  left: 20px;
+  width: 2px;
+  height: 20px;
+}
+
+.dialog .close::before {
+  transform: rotate(35deg);
+}
+
+.dialog .close::after {
+  transform: rotate(-35deg);
+}
+
+.butt {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.butt #input {
+  background-color: #fadfdf;
+  border-radius: 6px;
+  border: 1px solid #f10707;
+  height: 43px;
+  line-height: 43px;
+  width: 290px;
+  font-size: 14px;
+}
+
+.butt button {
+  width: 103px;
+  height: 43px;
+  background-color: #f10707;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 19px;
+  border-radius: 25px;
+}

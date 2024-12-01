@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="./sketch.js"></script>
+    <script src="./chat.js"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="left" id="EXTREMESCALE">EXTREME SCALE</div>
+      <div class="right">CHICHI ZHAO</div>
+    </div>
+
+    <div class="dialog" id="dialog" style="display: none">
+      <div id="close" class="close"></div>
+      <div class="part1">
+        <span class="spec"
+          >"What do you think of when you hear Chinese culture?"</span
+        >
+        invites you to reflect on how Chinese cultural elements are perceived,
+        interpreted, and represented. This interactive website uses playful
+        emoji representations of familiar symbols to explore the tension between
+        cultural authenticity and appropriation. By engaging with these floating
+        icons, you can uncover hidden layers of meaning and question how design
+        shapes our understanding of cultural identity.
+      </div>
+      <!-- <div class="part2">
+        <div>
+          Share your thoughts and contribute to the conversation by
+          participating in this short survey:
+          <a
+            href="https://www.menti.com/albtnd1nycs2?source=qr-instructions-widget"
+            target="_blank"
+          >
+            https://www.menti.com/albtnd1nycs2?source=qr-instructions-widget</a
+          >.
+        </div>
+
+        <div class="img">
+          <img
+            style="width: 100%; height: 100%; margin-left: 25px"
+            src="./resources/qrcode.jpg"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div> -->
+    </div>
+
+    <div class="butt">
+      <input id="input" type="text" maxlength="30" />
+      <button onclick="onClickSend()">SUBMIT</button>
+    </div>
+
+    <script>
+      var EXTREMESCALE_Dialog = true;
+      $("#EXTREMESCALE").on("click", () => {
+        if ($("#dialog")[0].style.display == "none") {
+          $("#dialog")[0].style.display = "";
+        } else {
+          $("#dialog")[0].style.display = "none";
+        }
+      });
+
+      $("#close").on("click", () => {
+        $("#dialog")[0].style.display = "none";
+      });
+    </script>
+  </body>
+</html>
