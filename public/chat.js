@@ -1,5 +1,5 @@
 // 改成本地的IP地址
-const socket = io("ws://192.168.2.5:3000");
+const socket = io("ws://chinese-culture.onrender.com:3000");
 
 socket.on("chat message", (msg) => {
   chatMatterMgr.add(msg.message);
