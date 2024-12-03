@@ -19,7 +19,7 @@ var leading = 0;
 var textScaler = 0.35;
 
 var starterText =
-  " What comes \n to mind when \n you think of \n Chinese culture? ";
+  " What comes to \n your mind when \n you think of \n Chinese \n culture? ";
 
 var constrainMode = 1;
 
